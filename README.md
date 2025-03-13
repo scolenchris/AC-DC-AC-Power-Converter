@@ -1,5 +1,7 @@
 # AC-DC-AC-Power-Converter
 
+![image](https://github.com/user-attachments/assets/0ab154b9-bc6f-4de4-bd2d-82d34a2d9def)
+
 - [中文版](./README_CN.md)
 
 A multi-stage power conversion system designed to convert single-phase AC input to regulated AC output. It includes a rectifier, Buck chopper, and inverter, with PWM control and soft-start functionality for efficient power management.
