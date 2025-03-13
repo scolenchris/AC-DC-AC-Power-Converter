@@ -94,11 +94,11 @@ $\begin{array}{c}{U}*{d}=\frac{1}{\pi}{\int}_{\alpha}^{\pi +\alpha}\sqrt{2}{U}_{
 
 Substituting the values, we solve for:
 
-$\mathrm{\alpha}=27.89\xb0$
+$\mathrm{\alpha}=27.89°$
 
 After determining the triggering angle, the comparison voltage for generating the phase-controlled trigger waveform can be calculated. Since there is a 180° phase difference between the two phases, the denominator for calculating the relative voltage ratio is 180°. Considering that the system operates in rectification mode, the triggering angle α ranges from 0° to 90°, so the numerator is multiplied by 2. Thus, the relative comparison voltage ratio β can be expressed as:
 
-$\beta =\frac{2\times \alpha}{180\xb0}=0.3099$
+$\beta =\frac{2\times \alpha}{180°}=0.3099$
 
 This value is set in the sliding rheostat of the phase-controlled trigger circuit, as shown in the figure below.
 
@@ -182,11 +182,11 @@ As shown in the figures above, the integral controller is ultimately introduced 
 
 Based on process control principles, to determine P, it is necessary to calculate the change in duty cycle required for each 1-volt deviation in the output voltage of the step-down chopper circuit:
 
-$\begin{array}{c}\u2206{\alpha}_{b}=\frac{1}{{\mathrm{U}}_{\mathrm{b}\mathrm{i}}}\approx 0.00571\#\left(5\right)\end{array}$
+$\begin{array}{c}\Delta{\alpha}_{b}=\frac{1}{{\mathrm{U}}_{\mathrm{b}\mathrm{i}}}\approx 0.00571\#\left(5\right)\end{array}$
 
 As a feedback loop, P is taken as n times the change in duty cycle, thus setting n = 2:
 
-$\begin{array}{c}P=n\u2206{\alpha}_{b}=0.01142\approx 0.011\#\left(6\right)\end{array}$
+$\begin{array}{c}P=n\Delta{\alpha}_{b}=0.01142\approx 0.011\#\left(6\right)\end{array}$
 
 The parameter I is determined through the PI tuning method and multiple experimental simulations, resulting in:
 
