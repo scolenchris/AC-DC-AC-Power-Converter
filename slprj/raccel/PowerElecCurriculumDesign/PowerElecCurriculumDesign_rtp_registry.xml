@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_rtp_registry/R2023a">
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="c5ea78ed-1c1e-496c-a538-1f84222a7f23">
+    <blockPath>PowerElecCurriculumDesign/Repeating Sequence/Constant</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="b335f936-1664-4709-90c5-ee4761603ce5"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.ModelMetadata type="slsa.mm.rtpregistry.ModelMetadata" uuid="b5785f58-04eb-4648-bca8-1f0b7bff5f5b">
+    <modelName>PowerElecCurriculumDesign</modelName>
+  </slsa.mm.rtpregistry.ModelMetadata>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="8a27abfc-6133-4e41-8348-0137d809dd30">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="266a741d-fb3d-47dd-830d-21a6bfbd2b17"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="14532996-b9a4-4a19-b5f8-8d98fe89ae8e"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="266a741d-fb3d-47dd-830d-21a6bfbd2b17">
+    <blockPath>PowerElecCurriculumDesign/Repeating Sequence/Look-Up Table1</blockPath>
+    <name>BreakpointsForDimension1</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="8a27abfc-6133-4e41-8348-0137d809dd30"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="14532996-b9a4-4a19-b5f8-8d98fe89ae8e">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="8a27abfc-6133-4e41-8348-0137d809dd30"/>
+    <valueIndices>7</valueIndices>
+    <valueIndices>9</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="b335f936-1664-4709-90c5-ee4761603ce5">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="c5ea78ed-1c1e-496c-a538-1f84222a7f23"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="782739d4-dc0a-488a-a830-51b985896b40"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="782739d4-dc0a-488a-a830-51b985896b40">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="b335f936-1664-4709-90c5-ee4761603ce5"/>
+    <valueIndices>14</valueIndices>
+    <valueIndices>14</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+</MF0>

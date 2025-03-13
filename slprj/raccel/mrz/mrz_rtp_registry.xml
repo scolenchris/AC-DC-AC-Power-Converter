@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_rtp_registry/R2023a">
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="083da9c1-d748-448b-98f1-f1b958851bd4">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="802e2bda-608d-454d-913f-1c96193ff949"/>
+    <valueIndices>22</valueIndices>
+    <valueIndices>22</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="802e2bda-608d-454d-913f-1c96193ff949">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="15e0bcde-362f-43a6-8255-e36e1afd2de0"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="083da9c1-d748-448b-98f1-f1b958851bd4"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.ModelMetadata type="slsa.mm.rtpregistry.ModelMetadata" uuid="b08a940e-f4b2-441f-85bc-2005bf0af831">
+    <modelName>mrz</modelName>
+  </slsa.mm.rtpregistry.ModelMetadata>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="15e0bcde-362f-43a6-8255-e36e1afd2de0">
+    <blockPath>mrz/Repeating Sequence/Constant</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="802e2bda-608d-454d-913f-1c96193ff949"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="a52c9be1-8489-4cb4-84b5-a91bcdc8c142">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="6efa0819-103f-4dfc-9890-10899a6ae531"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b6c3da29-7d2c-4279-810b-32a5cb3facbf"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b6c3da29-7d2c-4279-810b-32a5cb3facbf">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="a52c9be1-8489-4cb4-84b5-a91bcdc8c142"/>
+    <valueIndices>6</valueIndices>
+    <valueIndices>8</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="6efa0819-103f-4dfc-9890-10899a6ae531">
+    <blockPath>mrz/Repeating Sequence/Look-Up Table1</blockPath>
+    <name>BreakpointsForDimension1</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="a52c9be1-8489-4cb4-84b5-a91bcdc8c142"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+</MF0>
