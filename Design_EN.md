@@ -1,10 +1,11 @@
-# I. Research Background
+![image](https://github.com/user-attachments/assets/dcab84e7-1027-4d7b-b64e-fb585c4b7389)# I. Research Background
 
 This course aims to comprehensively equip students with the structural understanding, operational principles, control methodologies, design calculations, and experimental skills of various power electronic circuits through a combination of theoretical and practical approaches. The curriculum encompasses the combined application of multiple conversion circuits to achieve efficient transformation and control of electrical energy. Throughout the learning process, students will deeply appreciate the importance of applying theoretical knowledge to real-world scenarios, while also understanding the value of teamwork. The course places particular emphasis on fostering students' innovative spirit, stimulating their creative consciousness, and enhancing their hands-on and practical operational abilities through practice.
 
 # II. Scheme Demonstration (Design Concept)
 
 **Figure 1: Overall Framework Diagram of the Power Electronic System Circuit**
+![image](https://github.com/user-attachments/assets/c74f9623-6f42-4dd4-a972-ba0d1839ed03)
 
 As illustrated in Figure 1, the main circuit of this design consists of a rectifier circuit, a Buck step-down chopper circuit, and an inverter circuit. Additionally, to achieve effective control of thyristors and IGBTs, corresponding trigger circuits are required for each part of the circuit. The input voltage is single-phase alternating current (AC), which is converted to direct current (DC) through rectification and filtering processes, and then regenerated into AC through step-down and inversion processes.
 
@@ -29,14 +30,20 @@ To achieve the effect of tracking the given chopper output voltage, a voltage cl
 ## 1. Analysis and Simulation of Phase-Controlled Trigger Circuit
 
 **Figure 2: Simulation Circuit of Grid Voltage Step-Down Circuit and Phase-Locked Loop**
+![image](https://github.com/user-attachments/assets/b146140f-d98e-432c-bdc5-dfab913bb8a9)
 
 **Figure 3: Waveform Simulation Diagram from Sine Wave Sampling to Rectangular Wave**
+![image](https://github.com/user-attachments/assets/69499ca8-420f-4b9d-b1f8-5f71c48b25c0)
 
 For the processing of the grid input voltage, an operational amplifier circuit is first employed to step down the grid voltage, reducing its amplitude to approximately 10 volts. Subsequently, a Schmitt trigger is used to phase-lock the stepped-down voltage, accurately capturing the zero-crossing signal. The Schmitt trigger, leveraging its hysteresis characteristics, stably converts the input signal into a corresponding rectangular wave output. This approach not only effectively reduces the voltage amplitude but also generates rectangular wave signals corresponding to the zero-crossing points, facilitating subsequent signal processing and control applications.
 
 **Figure 4: Simulation Circuit of Integration (Rectangular to Triangular Wave)**
+![image](https://github.com/user-attachments/assets/72b64264-49b4-464e-8122-2911b3814acd)
 
 **Figure 5: Simulation Waveform Diagram of Rectangular Wave Integration into Triangular Wave**
+
+![image](https://github.com/user-attachments/assets/9307f5fa-2c66-46b5-89f4-a7b847d46ea9)
+
 
 In the next stage, the output rectangular wave is integrated to generate a corresponding triangular wave. During this simulation, the zero-drift phenomenon in the integration stage is not significant, thus eliminating the need for a zero-drift suppressor. Through the integration operation, each rising and falling edge of the rectangular wave is converted into a linear ramp, forming a continuous triangular waveform.
 
@@ -54,19 +61,31 @@ As shown in the figure, the output triangular wave voltage ranges from 0 to 5 vo
 
 **Figure 6: Dual Anti-Phase Differential Signal Conditioning Circuit**
 
+![image](https://github.com/user-attachments/assets/894fe34b-7112-42b4-9da0-e4a6ef2ccb94)
+
 **Figure 7: Simulation Waveform Diagram of Anti-Phase Output Voltage from Conditioning Circuit**
+
+![image](https://github.com/user-attachments/assets/de873b4e-f511-4a73-b69b-93616f090676)
 
 In the signal conditioning stage, two differential circuits are used to split the original triangular wave into two triangular waves with a 180° phase difference. The generated anti-phase signals can be used to control the conduction of two sets of thyristors, respectively.
 
 **Figure 8: Simulation Circuit of Comparison Stage**
 
+![image](https://github.com/user-attachments/assets/c2a8c195-7bd1-448e-8d2c-6608ec2b4c66)
+
 **Figure 9: Simulation Waveform Diagram of Triangular Wave Comparison with Given Voltage**
+
+![image](https://github.com/user-attachments/assets/2fade552-b27b-4a50-89a9-e8ec50985382)
 
 In the comparison stage, the output of the signal conditioning (triangular wave) is compared with a given reference voltage (constant). This process is typically implemented using a comparator. When the voltage of the triangular wave exceeds the reference voltage, the comparator outputs a high-level signal; otherwise, it outputs a low-level signal. The output signal generated in this manner is the phase-controlled voltage, used to control the conduction angle of the thyristors.
 
 **Figure 10: Simulation Circuit of Logic Processing**
 
+![image](https://github.com/user-attachments/assets/e34c7275-0bd5-41c3-bc44-cecb3c78e7ae)
+
 **Figure 11: Comparison Diagram of Logic Processing Output and Various In-Phase Waveforms**
+
+![image](https://github.com/user-attachments/assets/c4b34a22-d271-4d5c-96b8-1e3934d0df47)
 
 In the signal conditioning section, theoretically, the comparator output is already a phase-controlled rectangular wave that can be used to control the conduction and cutoff of thyristors. However, the addition of logic processing aims to prevent the comparator output from simultaneously turning on all four thyristors in the rectifier circuit, thereby avoiding short circuits.
 
@@ -75,6 +94,8 @@ In Figure 11, the lines represent different voltage signals: the purple line rep
 If the blue waveform is directly input to the thyristors, it would cover both the positive and negative parts of the sine wave, potentially causing reverse thyristors to conduct and leading to a short circuit. Therefore, by performing a logical AND operation between the blue waveform and the orange phase-locked signal, the yellow waveform is obtained. The yellow waveform only includes the positive half-cycle of the sine wave, effectively avoiding the risk of a short circuit in the rectifier circuit.
 
 **Figure 12: Output Waveform Diagram After Logic Processing**
+
+![image](https://github.com/user-attachments/assets/9383854a-e810-40b8-beb1-98e42a24ec0c)
 
 In the rectifier circuit, to ensure the correct triggering of thyristors and the proper operation of the rectifier circuit, the two thyristor trigger waveforms obtained are as shown in the figure above. The trigger pulses of the two different phases are 90° apart, while the pulses of the same phase are 180° apart. This phase relationship ensures that each thyristor conducts at the correct time, achieving effective rectification and avoiding issues such as short circuits or overlapping conduction.
 
@@ -104,6 +125,8 @@ This value is set in the sliding rheostat of the phase-controlled trigger circui
 
 **Figure 13: Schematic Diagram of Phase Adjustment in the Phase-Controlled Trigger Circuit**
 
+![image](https://github.com/user-attachments/assets/2bd1f859-17cd-4d85-b3b5-93604e9973f1)
+
 For the soft-start time, which is the time required for the current to rise from zero to 80% of the maximum voltage, we have:
 
 ${\mathrm{U}}_{\mathrm{s}\mathrm{o}\mathrm{f}\mathrm{t}\mathrm{o}}=0.8\times 175\mathrm{V}=140\mathrm{V}$
@@ -125,6 +148,8 @@ This result slightly deviates from the expected 3.6 seconds. However, considerin
 ### (1) Analysis and Simulation of Open-Loop Buck Circuit
 
 **Figure 14: Simulation Circuit of Buck Chopper**
+
+![image](https://github.com/user-attachments/assets/f7f914df-81e5-4563-85dc-f8319dc3fc67)
 
 In the design specifications of the corresponding Buck circuit, the output voltage is:
 
@@ -148,9 +173,13 @@ where α_b is the duty cycle of the rectangular wave generator in the step-down 
 
 **Figure 15: Data Entry for the Pulse Generator in the Buck Chopper Circuit**
 
+![image](https://github.com/user-attachments/assets/6b5ac3e2-d516-4155-856b-1b221096de4c)
+
 ### (2) Analysis and Simulation of Closed-Loop Buck Circuit
 
 **Figure 16: Simulation Diagram and Structural Schematic of the Voltage Closed-Loop Buck Chopper Circuit**
+
+![image](https://github.com/user-attachments/assets/28354c15-0240-4014-94d5-70e1904ddd71)
 
 Based on the requirements, we designed the above PI controller on the foundation of the open-loop chopper circuit. This controller includes a delay integration stage, a PI controller stage, a PI-to-PWM conversion stage, and an output voltage acquisition stage. Its working principle is as follows:
 
@@ -162,13 +191,21 @@ Below, we discuss the settings for the values of (P) and (I).
 
 **Figure 17: Output of the Chopper Circuit Without the Integral Stage**
 
+![image](https://github.com/user-attachments/assets/37683a08-57f9-4f67-bdaf-b879e99e137d)
+
 **Figure 18: Output Waveform of the PI Controller Without the Integral Stage**
+
+![image](https://github.com/user-attachments/assets/6b4021ac-d5af-45e3-88e5-aedbde052f9e)
 
 As shown in the figures, when the integral gain I is set to 0 and the proportional gain P is adjusted, a steady-state error is observed in the system: despite the set value being 70 volts, the output only reaches 51.92 volts, falling short of the expected voltage. From the output of the PI controller, it can be seen that after 4.5 seconds, the output remains unchanged, indicating that the system has reached a dynamic equilibrium state. However, to eliminate the steady-state error, it is necessary to introduce an integral controller. By adjusting the value of the integral gain I while maintaining the current proportional gain P , the steady-state error can be effectively eliminated.
 
 **Figure 19: Output Waveform of the Chopper Voltage After Introducing the Integral Stage at 1.5 Seconds**
 
+![image](https://github.com/user-attachments/assets/7af96925-1373-490b-b68d-6c267333601d)
+
 **Figure 20: Output Waveform of the PI Controller After Introducing the Integral Stage at 1.5 Seconds**
+
+![image](https://github.com/user-attachments/assets/120c8705-6c8b-4007-bd96-20213f724a1f)
 
 Consider introducing the integral stage after 1.5 seconds. However, as observed in the figures, at 1.5 seconds, the output voltage of the chopper increases significantly, with a large rate of voltage change, indicating an overshoot phenomenon. Examining the output of the PI controller (as shown in the figure), a noticeable overshoot is observed. Therefore, considering that the value of I is already relatively small, to ensure the steady-state error is correctly eliminated, we do not change the value of I, but instead delay the introduction of the integral stage. Since introducing the integral stage too early results in an excessively large output from the integral part (due to accumulated error), it is considered to introduce the integral stage between 2 to 3 seconds to reduce the overshoot caused by large errors.
 
@@ -176,7 +213,11 @@ Additionally, we note that the chopper voltage output reaches 71.75 volts at 5 s
 
 **Figure 21: Output Waveform of the Chopper Voltage After Introducing the Integral Stage at 2.25 Seconds**
 
+![image](https://github.com/user-attachments/assets/60b04e02-83af-4d53-8bb4-234ec5449c73)
+
 **Figure 22: Output Waveform of the PI Controller After Introducing the Integral Stage at 2.25 Seconds**
+
+![image](https://github.com/user-attachments/assets/40fdef8c-ced9-4fcb-9ef3-185e8a27f33c)
 
 As shown in the figures above, the integral controller is ultimately introduced at 2.25 seconds, with the integral gain I set to 0.01 and the proportional gain P set to 0.011. Under this parameter configuration, the final output voltage of the system reaches the design requirement of 70 volts, with minimal error. When the integral controller is introduced at 2.25 seconds, the system's transition process exhibits good stability, and the ripple coefficient meets the design standards. The specific calculation process is as follows.
 
@@ -224,11 +265,17 @@ where U_r and U_c are the amplitudes of the signal wave and carrier wave, respec
 
 **Figure 23: Output Parameter Settings for the Carrier and Signal Waves in the Inverter Simulation Circuit**
 
+![image](https://github.com/user-attachments/assets/04337025-f9ea-4acc-b4ad-dc13941b26af)
+
 For ease of calculation, the amplitude of the carrier wave is set to 1. According to the relative amplitude β_i of the signal wave, the amplitude of the signal wave is set to 0.6857. Based on the above derivation, the signal wave and carrier wave are configured as shown in the figure above.
 
 **Figure 24: Voltage Output Waveform of the Triangular Wave (Carrier) Generator**
 
+![image](https://github.com/user-attachments/assets/3e696e08-dd51-41ea-8056-6d44b407731c)
+
 **Figure 25: Simulation Waveform and Data of the Carrier Wave in the Single-Phase Inverter Circuit**
+
+![image](https://github.com/user-attachments/assets/b5cd86c6-7e58-444d-99f4-b2dba6297cef)
 
 Through simulation analysis, it is observed that when the amplitude of the signal wave is set to 0.6857, the output voltage exceeds the theoretical calculated value. Further examination of the amplified carrier wave (triangular wave) reveals distortion, as shown in the figure. This distortion, when modulated by the signal wave, prolongs the high-level duration of part of the modulated wave, thereby increasing the conduction time of the IGBT and ultimately leading to an increase in the output voltage amplitude. To bring the output closer to the theoretical value, the amplitude of the signal wave is slightly reduced to 0.54, resulting in an output that aligns well with the theoretical calculations.
 
@@ -239,6 +286,8 @@ A qualitative and quantitative analysis of the main data and phenomena obtained 
 ## 1. Analysis of Rectifier Circuit Output Waveform Data
 
 **Figure 26: Soft-Start Time and Output Voltage Waveform Data of the Controlled Rectifier Simulation**
+
+![image](https://github.com/user-attachments/assets/84073a4c-5b8e-4545-94ac-b8ebdbeecf9a)
 
 From the figure above, the following can be observed:
 
@@ -270,7 +319,11 @@ From the figure above, the following can be observed:
 
 **Figure 27: Voltage Output Data and Waveform of the Chopper Circuit**
 
+![image](https://github.com/user-attachments/assets/dd25839b-24f4-4899-ba0b-a5b1c3991117)
+
 **Figure 28: IGBT Trigger Pulse Waveform and IGBT Output Voltage Waveform of the Chopper Circuit**
+
+![image](https://github.com/user-attachments/assets/c9b1a883-e0c2-4021-a009-6cb75be25bad)
 
 From the figures, the following observations can be made:
 
@@ -296,7 +349,11 @@ From the figures, the following observations can be made:
 
 **Figure 29: Voltage Output Data and Waveform of the Closed-Loop Buck Chopper Circuit**
 
+![image](https://github.com/user-attachments/assets/5fd09311-d2f0-4ea0-be62-053b85eafbb0)
+
 **Figure 30: IGBT Trigger Pulse Waveform and IGBT Output Voltage Waveform of the Closed-Loop Buck Chopper Circuit**
+
+![image](https://github.com/user-attachments/assets/91957195-f6cd-4745-9544-f7b72dff4e60)
 
 The overall output voltage waveform of the chopper circuit exhibits a smooth rise. The presence of the PI controller stabilizes the output voltage at 70.148 V, with the error within an acceptable range.
 
@@ -312,7 +369,9 @@ The overall output voltage waveform of the chopper circuit exhibits a smooth ris
 
   ${\mathrm{\delta}}_{\mathrm{h}\mathrm{h}\mathrm{f}}=0.008\mathrm{\%}$
 
-  **Figure 31: Amplified Output Voltage (Ripple) Waveform of the Closed-Loop Buck Chopper Circuit**
+**Figure 31: Amplified Output Voltage (Ripple) Waveform of the Closed-Loop Buck Chopper Circuit**
+
+![image](https://github.com/user-attachments/assets/89a179e0-5eab-4c3e-a264-6041cf5de62c)
 
   Next, the ripple coefficient is calculated.
 
@@ -340,7 +399,11 @@ The overall output voltage waveform of the chopper circuit exhibits a smooth ris
 
 **Figure 32: Simulation Output Voltage Waveform and Data of the Single-Phase Inverter Circuit**
 
+![image](https://github.com/user-attachments/assets/c8dc8a3d-35a9-4c7a-838e-5ec96d650a12)
+
 **Figure 33: Local Amplified Waveform of the Stable Output of the Single-Phase Inverter Circuit**
+
+![image](https://github.com/user-attachments/assets/c5a9eb55-c43b-47e4-8158-d4fd449ac5af)
 
 The output voltage of the single-phase inverter circuit is:
 
@@ -372,9 +435,15 @@ Based on the waveform and data, it can be concluded that the single-phase invert
 
 **Figure 34: Simulation Output Voltage Waveform and Data of the Single-Phase Inverter Circuit**
 
+![image](https://github.com/user-attachments/assets/d01ad7d6-c8d7-423f-bdc6-7f8abaa2154f)
+
 **Figure 35: Simulation Carrier Waveform and Data of the Single-Phase Inverter Circuit**
 
+![image](https://github.com/user-attachments/assets/625ab309-86b9-454d-a718-999cb9880dc8)
+
 **Figure 36: Local Amplified Waveform of the Stable Output of the Single-Phase Inverter Circuit**
+
+![image](https://github.com/user-attachments/assets/ed0fe85c-8ad5-465f-b6c9-996a7b9d023e)
 
 The output voltage of the single-phase inverter circuit is:
 
