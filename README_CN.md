@@ -1,5 +1,7 @@
 # AC-DC-AC 电力电子转换器
 
+![image](https://github.com/user-attachments/assets/a8b3930d-05df-4d59-99c5-854ce7bd32b8)
+
 - [English Version](./README.md)
 
 ## 项目概述
