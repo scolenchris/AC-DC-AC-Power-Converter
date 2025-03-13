@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dcab84e7-1027-4d7b-b64e-fb585c4b7389)# I. Research Background
+# I. Research Background
 
 This course aims to comprehensively equip students with the structural understanding, operational principles, control methodologies, design calculations, and experimental skills of various power electronic circuits through a combination of theoretical and practical approaches. The curriculum encompasses the combined application of multiple conversion circuits to achieve efficient transformation and control of electrical energy. Throughout the learning process, students will deeply appreciate the importance of applying theoretical knowledge to real-world scenarios, while also understanding the value of teamwork. The course places particular emphasis on fostering students' innovative spirit, stimulating their creative consciousness, and enhancing their hands-on and practical operational abilities through practice.
 
@@ -43,7 +43,6 @@ For the processing of the grid input voltage, an operational amplifier circuit i
 **Figure 5: Simulation Waveform Diagram of Rectangular Wave Integration into Triangular Wave**
 
 ![image](https://github.com/user-attachments/assets/9307f5fa-2c66-46b5-89f4-a7b847d46ea9)
-
 
 In the next stage, the output rectangular wave is integrated to generate a corresponding triangular wave. During this simulation, the zero-drift phenomenon in the integration stage is not significant, thus eliminating the need for a zero-drift suppressor. Through the integration operation, each rising and falling edge of the rectangular wave is converted into a linear ramp, forming a continuous triangular waveform.
 
@@ -373,7 +372,7 @@ The overall output voltage waveform of the chopper circuit exhibits a smooth ris
 
 ![image](https://github.com/user-attachments/assets/89a179e0-5eab-4c3e-a264-6041cf5de62c)
 
-  Next, the ripple coefficient is calculated.
+Next, the ripple coefficient is calculated.
 
 - The ripple voltage is defined as:
 
