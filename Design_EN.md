@@ -2,6 +2,27 @@
 
 This course aims to comprehensively equip students with the structural understanding, operational principles, control methodologies, design calculations, and experimental skills of various power electronic circuits through a combination of theoretical and practical approaches. The curriculum encompasses the combined application of multiple conversion circuits to achieve efficient transformation and control of electrical energy. Throughout the learning process, students will deeply appreciate the importance of applying theoretical knowledge to real-world scenarios, while also understanding the value of teamwork. The course places particular emphasis on fostering students' innovative spirit, stimulating their creative consciousness, and enhancing their hands-on and practical operational abilities through practice.
 
+## Table of Contents
+
+- [I. Research Background](#i-research-background)
+  - [Table of Contents](#table-of-contents)
+- [II. Scheme Demonstration (Design Concept)](#ii-scheme-demonstration-design-concept)
+- [III. Process Discussion](#iii-process-discussion)
+  - [1. Analysis and Simulation of Phase-Controlled Trigger Circuit](#1-analysis-and-simulation-of-phase-controlled-trigger-circuit)
+  - [2. Analysis and Simulation of Rectifier Circuit Implementation](#2-analysis-and-simulation-of-rectifier-circuit-implementation)
+  - [3. Analysis and Simulation of Step-Down Chopper Circuit Implementation](#3-analysis-and-simulation-of-step-down-chopper-circuit-implementation)
+    - [(1) Analysis and Simulation of Open-Loop Buck Circuit](#1-analysis-and-simulation-of-open-loop-buck-circuit)
+    - [(2) Analysis and Simulation of Closed-Loop Buck Circuit](#2-analysis-and-simulation-of-closed-loop-buck-circuit)
+  - [4. Analysis and Simulation of Inverter Circuit Implementation](#4-analysis-and-simulation-of-inverter-circuit-implementation)
+- [IV. Result Analysis](#iv-result-analysis)
+  - [1. Analysis of Rectifier Circuit Output Waveform Data](#1-analysis-of-rectifier-circuit-output-waveform-data)
+  - [2. Analysis of Step-Down Chopper Circuit Output Waveform Data](#2-analysis-of-step-down-chopper-circuit-output-waveform-data)
+    - [(1) Analysis of Open-Loop Buck Circuit Waveform](#1-analysis-of-open-loop-buck-circuit-waveform)
+    - [(2) Analysis of Closed-Loop Buck Circuit Waveform](#2-analysis-of-closed-loop-buck-circuit-waveform)
+  - [3. Analysis of Inverter Circuit Output Waveform Data](#3-analysis-of-inverter-circuit-output-waveform-data)
+    - [(1) Open-Loop Condition](#1-open-loop-condition)
+    - [(2) Closed-Loop Condition](#2-closed-loop-condition)
+
 # II. Scheme Demonstration (Design Concept)
 
 **Figure 1: Overall Framework Diagram of the Power Electronic System Circuit**
