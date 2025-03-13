@@ -5,6 +5,7 @@ This course aims to comprehensively equip students with the structural understan
 # II. Scheme Demonstration (Design Concept)
 
 **Figure 1: Overall Framework Diagram of the Power Electronic System Circuit**
+
 ![image](https://github.com/user-attachments/assets/c74f9623-6f42-4dd4-a972-ba0d1839ed03)
 
 As illustrated in Figure 1, the main circuit of this design consists of a rectifier circuit, a Buck step-down chopper circuit, and an inverter circuit. Additionally, to achieve effective control of thyristors and IGBTs, corresponding trigger circuits are required for each part of the circuit. The input voltage is single-phase alternating current (AC), which is converted to direct current (DC) through rectification and filtering processes, and then regenerated into AC through step-down and inversion processes.
@@ -30,14 +31,17 @@ To achieve the effect of tracking the given chopper output voltage, a voltage cl
 ## 1. Analysis and Simulation of Phase-Controlled Trigger Circuit
 
 **Figure 2: Simulation Circuit of Grid Voltage Step-Down Circuit and Phase-Locked Loop**
+
 ![image](https://github.com/user-attachments/assets/b146140f-d98e-432c-bdc5-dfab913bb8a9)
 
 **Figure 3: Waveform Simulation Diagram from Sine Wave Sampling to Rectangular Wave**
+
 ![image](https://github.com/user-attachments/assets/69499ca8-420f-4b9d-b1f8-5f71c48b25c0)
 
 For the processing of the grid input voltage, an operational amplifier circuit is first employed to step down the grid voltage, reducing its amplitude to approximately 10 volts. Subsequently, a Schmitt trigger is used to phase-lock the stepped-down voltage, accurately capturing the zero-crossing signal. The Schmitt trigger, leveraging its hysteresis characteristics, stably converts the input signal into a corresponding rectangular wave output. This approach not only effectively reduces the voltage amplitude but also generates rectangular wave signals corresponding to the zero-crossing points, facilitating subsequent signal processing and control applications.
 
 **Figure 4: Simulation Circuit of Integration (Rectangular to Triangular Wave)**
+
 ![image](https://github.com/user-attachments/assets/72b64264-49b4-464e-8122-2911b3814acd)
 
 **Figure 5: Simulation Waveform Diagram of Rectangular Wave Integration into Triangular Wave**
