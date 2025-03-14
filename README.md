@@ -26,6 +26,8 @@ This project utilizes MATLAB and the Simscape/Electrical/Power System library to
 
 - [中文版](./Design_CN.md)
 - [English Version](./Design_EN.md)
+- For a better reading experience, you can directly click on my blog to read (the formula can be displayed normally)
+- [Blog article link](https://scolenchris.top/posts/30ed28ce.html)
 
 ## Design Requirements
 

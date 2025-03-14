@@ -1,3 +1,8 @@
+- [中文版](./Design_CN.md)
+- **Due to GitHub's poor support for LaTeX, please download and use Typora to view**
+- For a better reading experience, you can directly click on my blog to read (the formula can be displayed normally)
+- [Blog article link](https://scolenchris.top/posts/30ed28ce.html)
+
 # I. Research Background
 
 This course aims to comprehensively equip students with the structural understanding, operational principles, control methodologies, design calculations, and experimental skills of various power electronic circuits through a combination of theoretical and practical approaches. The curriculum encompasses the combined application of multiple conversion circuits to achieve efficient transformation and control of electrical energy. Throughout the learning process, students will deeply appreciate the importance of applying theoretical knowledge to real-world scenarios, while also understanding the value of teamwork. The course places particular emphasis on fostering students' innovative spirit, stimulating their creative consciousness, and enhancing their hands-on and practical operational abilities through practice.

@@ -24,6 +24,8 @@
 
 - [中文版](./Design_CN.md)
 - [English Version](./Design_EN.md)
+- 为了更好的阅读体验，可以直接点击进入我的 blog 进行阅读（公式能够显示正常）
+- [blog 文章链接](https://scolenchris.top/posts/c261a60c.html)
 
 ## 设计需求
 
